@@ -1,0 +1,1377 @@
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  cat .\hello.txt
+hello
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git commit -m "version1"
+[main (root-commit) af3bad3] version1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.txt
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9 (HEAD -> main)
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git commit -m "version2"
+[main 419e21d] version2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git commit -m "version3"
+[main 3459a91] version3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git status
+On branch main
+nothing to commit, working tree clean
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea (HEAD -> main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git branch feature1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea (HEAD -> main, feature1)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git checkout feature1
+Switched to branch 'feature1'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git checkout --all --graph
+error: unknown option `all'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge, diff3, or zdiff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git log --all --graph
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea (HEAD -> feature1, main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git status
+On branch feature1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        feature
+
+nothing added to commit but untracked files present (use "git add" to track)
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git commit -m "feature commit 1"
+[feature1 a8aa297] feature commit 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git log --all --graph
+* commit a8aa2974fa60447a23b6f958fbe4789347289caf (HEAD -> feature1)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:26:46 2024 +0300
+|
+|     feature commit 1
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea (main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git commit -m "feature commit 2"
+[feature1 b1a75fc] feature commit 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git log --all --graph
+* commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884 (HEAD -> feature1)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:29:45 2024 +0300
+|
+|     feature commit 2
+|
+* commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:26:46 2024 +0300
+|
+|     feature commit 1
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea (main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git checkout main
+Switched to branch 'main'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+* commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884 (feature1)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:29:45 2024 +0300
+|
+|     feature commit 2
+|
+* commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:26:46 2024 +0300
+|
+|     feature commit 1
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea (HEAD -> main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git commit -m "bug fix"
+[main 0d72be9] bug fix
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bugfix
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+* commit 0d72be9ae77e2564d57a96854d64f7079786fc39 (HEAD -> main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|     bug fix
+|
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:26:46 2024 +0300
+|
+|       feature commit 1
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git checkout feature1
+Switched to branch 'feature1'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git log --all --graph
+* commit 0d72be9ae77e2564d57a96854d64f7079786fc39 (main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|     bug fix
+|
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884 (HEAD -> feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:26:46 2024 +0300
+|
+|       feature commit 1
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git status
+On branch feature1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   feature
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git commit -m "feature done"
+[feature1 693f483] feature done
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git log --all --graph
+* commit 693f483a496c923841014f02d8a742bc21943f21 (HEAD -> feature1)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:40:37 2024 +0300
+|
+|     feature done
+|
+* commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:29:45 2024 +0300
+|
+|     feature commit 2
+|
+* commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:26:46 2024 +0300
+|
+|     feature commit 1
+|
+| * commit 0d72be9ae77e2564d57a96854d64f7079786fc39 (main)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git checkout main
+Switched to branch 'main'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+* commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:40:37 2024 +0300
+|
+|     feature done
+|
+* commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:29:45 2024 +0300
+|
+|     feature commit 2
+|
+* commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:26:46 2024 +0300
+|
+|     feature commit 1
+|
+| * commit 0d72be9ae77e2564d57a96854d64f7079786fc39 (HEAD -> main)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git merge feature1 -m "Merge Feature 1"
+Merge made by the 'ort' strategy.
+ feature | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+*   commit c16c5febff5142a953465039112581bca7b92acf (HEAD -> main)
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 0d72be9ae77e2564d57a96854d64f7079786fc39
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git branch conflict
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+*   commit c16c5febff5142a953465039112581bca7b92acf (HEAD -> main, conflict)
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 0d72be9ae77e2564d57a96854d64f7079786fc39
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git checkout feature1
+Switched to branch 'feature1'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  feature1  git checkout conflict
+Switched to branch 'conflict'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  conflict  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  conflict  git commit -m "conflict 1"
+[conflict cac86de] conflict 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  conflict  git log --all --graph
+* commit cac86de6bd4977508a3511a5d505318803e4a4d0 (HEAD -> conflict)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:48:39 2024 +0300
+|
+|     conflict 1
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf (main)
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 0d72be9ae77e2564d57a96854d64f7079786fc39
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  conflict  git checkout main
+Switched to branch 'main'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git commit -m "conflict 2"
+[main 0062aa7] conflict 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+* commit 0062aa7e3e55f82b8f475b44a82874368aff2536 (HEAD -> main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|     conflict 2
+|
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:48:39 2024 +0300
+|
+|       conflict 1
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 0d72be9ae77e2564d57a96854d64f7079786fc39
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+ ESCOD
+* commit 0062aa7e3e55f82b8f475b44a82874368aff2536 (HEAD -> main)
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|     conflict 2
+|
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:48:39 2024 +0300
+|
+|       conflict 1
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 0d72be9ae77e2564d57a96854d64f7079786fc39
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+|
+|     version2
+|
+* commit af3bad39000ebf35de1b78a882b991e27d0681c9
+  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+  Date:   Sun Mar 24 12:20:03 2024 +0300
+
+      version1
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git merge conflict -m "merge conflict"
+Auto-merging feature
+CONFLICT (content): Merge conflict in feature
+Automatic merge failed; fix conflicts and then commit the result.
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main 
+
+
+
+
+
+
+
+
+
+
+
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git commit -m "Merge Conflict Resolved"
+[main cf84654] Merge Conflict Resolved
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+*   commit cf846544049c875e32081186460ef5f383f1f45c (HEAD -> main)
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 0d72be9ae77e2564d57a96854d64f7079786fc39
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git branch new-feature
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+*   commit cf846544049c875e32081186460ef5f383f1f45c (HEAD -> main, new-feature)
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 0d72be9ae77e2564d57a96854d64f7079786fc39
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+|       bug fix
+|
+* commit 3459a91bfcd03a3e95b34dd2466bd225fb80f0ea
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:53 2024 +0300
+|
+|     version3
+|
+* commit 419e21db8ae83c59b72680d7b675b1d1d34cbae0
+| Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| Date:   Sun Mar 24 12:21:31 2024 +0300
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git checkout new-feature
+Switched to branch 'new-feature'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git add .
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git commit -m "new feature"
+[new-feature 4eaea07] new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new-feature
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git remode add origin https://github.com/kaanyvz/git-tutorial.git
+git: 'remode' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git remote add origin https://github.com/kaanyvz/git-tutorial.git
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git checkout main
+Switched to branch 'main'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git push origin main
+Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (32/32), 2.70 KiB | 692.00 KiB/s, done.
+Total 32 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/kaanyvz/git-tutorial.git
+ * [new branch]      main -> main
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git checkout new-feature
+Switched to branch 'new-feature'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git push origin new-feature
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'new-feature' on GitHub by visiting:
+remote:      https://github.com/kaanyvz/git-tutorial/pull/new/new-feature
+remote:
+To https://github.com/kaanyvz/git-tutorial.git
+ * [new branch]      new-feature -> new-feature
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 899 bytes | 449.00 KiB/s, done.
+From https://github.com/kaanyvz/git-tutorial
+   cf84654..116699a  main       -> origin/main
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git log --all --graph
+*   commit 116699a0604f954c768910ecca03eed42dcd9d7e (origin/main)
+|\  Merge: cf84654 4eaea07
+| | Author: Kaan Yavuz <106703853+kaanyvz@users.noreply.github.com>
+| | Date:   Sun Mar 24 13:33:53 2024 +0300
+| |
+| |     Merge pull request #1 from kaanyvz/new-feature
+| |
+| |     new feature
+| |
+| * commit 4eaea07886cb8c31644e94db50e6a2c44a400033 (HEAD -> new-feature, origin/new-feature)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 13:24:19 2024 +0300
+|
+|       new feature
+|
+*   commit cf846544049c875e32081186460ef5f383f1f45c (main)
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  new-feature  git checkout main
+Switched to branch 'main'
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git pull origin main
+From https://github.com/kaanyvz/git-tutorial
+ * branch            main       -> FETCH_HEAD
+Updating cf84654..116699a
+Fast-forward
+ new-feature | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new-feature
+ kaan_@KYPC  ~\OneDrive\Masaüstü\git-tutorial  main  git log --all --graph
+*   commit 116699a0604f954c768910ecca03eed42dcd9d7e (HEAD -> main, origin/main)
+|\  Merge: cf84654 4eaea07
+| | Author: Kaan Yavuz <106703853+kaanyvz@users.noreply.github.com>
+| | Date:   Sun Mar 24 13:33:53 2024 +0300
+| |
+| |     Merge pull request #1 from kaanyvz/new-feature
+| |
+| |     new feature
+| |
+| * commit 4eaea07886cb8c31644e94db50e6a2c44a400033 (origin/new-feature, new-feature)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 13:24:19 2024 +0300
+|
+|       new feature
+|
+*   commit cf846544049c875e32081186460ef5f383f1f45c
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+:...skipping...
+*   commit 116699a0604f954c768910ecca03eed42dcd9d7e (HEAD -> main, origin/main)
+|\  Merge: cf84654 4eaea07
+| | Author: Kaan Yavuz <106703853+kaanyvz@users.noreply.github.com>
+| | Date:   Sun Mar 24 13:33:53 2024 +0300
+| |
+| |     Merge pull request #1 from kaanyvz/new-feature
+| |
+| |     new feature
+| |
+| * commit 4eaea07886cb8c31644e94db50e6a2c44a400033 (origin/new-feature, new-feature)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 13:24:19 2024 +0300
+|
+|       new feature
+|
+*   commit cf846544049c875e32081186460ef5f383f1f45c
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 0d72be9ae77e2564d57a96854d64f7079786fc39
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:32:59 2024 +0300
+|
+:
+*   commit 116699a0604f954c768910ecca03eed42dcd9d7e (HEAD -> main, origin/main)
+|\  Merge: cf84654 4eaea07
+| | Author: Kaan Yavuz <106703853+kaanyvz@users.noreply.github.com>
+| | Date:   Sun Mar 24 13:33:53 2024 +0300
+| |
+| |     Merge pull request #1 from kaanyvz/new-feature
+| |
+| |     new feature
+| |
+| * commit 4eaea07886cb8c31644e94db50e6a2c44a400033 (origin/new-feature, new-feature)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 13:24:19 2024 +0300
+|
+|       new feature
+|
+*   commit cf846544049c875e32081186460ef5f383f1f45c
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
+:
+*   commit 116699a0604f954c768910ecca03eed42dcd9d7e (HEAD -> main, origin/main)
+|\  Merge: cf84654 4eaea07
+| | Author: Kaan Yavuz <106703853+kaanyvz@users.noreply.github.com>
+| | Date:   Sun Mar 24 13:33:53 2024 +0300
+| |
+| |     Merge pull request #1 from kaanyvz/new-feature
+| |
+| |     new feature
+| |
+| * commit 4eaea07886cb8c31644e94db50e6a2c44a400033 (origin/new-feature, new-feature)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 13:24:19 2024 +0300
+|
+|       new feature
+|
+*   commit cf846544049c875e32081186460ef5f383f1f45c
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+:
+*   commit 116699a0604f954c768910ecca03eed42dcd9d7e (HEAD -> main, origin/main)
+|\  Merge: cf84654 4eaea07
+| | Author: Kaan Yavuz <106703853+kaanyvz@users.noreply.github.com>
+| | Date:   Sun Mar 24 13:33:53 2024 +0300
+| |
+| |     Merge pull request #1 from kaanyvz/new-feature
+| |
+| |     new feature
+| |
+| * commit 4eaea07886cb8c31644e94db50e6a2c44a400033 (origin/new-feature, new-feature)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 13:24:19 2024 +0300
+|
+|       new feature
+|
+*   commit cf846544049c875e32081186460ef5f383f1f45c
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+:
+*   commit 116699a0604f954c768910ecca03eed42dcd9d7e (HEAD -> main, origin/main)
+|\  Merge: cf84654 4eaea07
+| | Author: Kaan Yavuz <106703853+kaanyvz@users.noreply.github.com>
+| | Date:   Sun Mar 24 13:33:53 2024 +0300
+| |
+| |     Merge pull request #1 from kaanyvz/new-feature
+| |
+| |     new feature
+| |
+| * commit 4eaea07886cb8c31644e94db50e6a2c44a400033 (origin/new-feature, new-feature)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 13:24:19 2024 +0300
+|
+|       new feature
+|
+*   commit cf846544049c875e32081186460ef5f383f1f45c
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+:
+*   commit 116699a0604f954c768910ecca03eed42dcd9d7e (HEAD -> main, origin/main)
+|\  Merge: cf84654 4eaea07
+| | Author: Kaan Yavuz <106703853+kaanyvz@users.noreply.github.com>
+| | Date:   Sun Mar 24 13:33:53 2024 +0300
+| |
+| |     Merge pull request #1 from kaanyvz/new-feature
+| |
+| |     new feature
+| |
+| * commit 4eaea07886cb8c31644e94db50e6a2c44a400033 (origin/new-feature, new-feature)
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 13:24:19 2024 +0300
+|
+|       new feature
+|
+*   commit cf846544049c875e32081186460ef5f383f1f45c
+|\  Merge: 0062aa7 cac86de
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:54:32 2024 +0300
+| |
+| |     Merge Conflict Resolved
+| |
+| * commit cac86de6bd4977508a3511a5d505318803e4a4d0 (conflict)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:48:39 2024 +0300
+| |
+| |     conflict 1
+| |
+* | commit 0062aa7e3e55f82b8f475b44a82874368aff2536
+|/  Author: kaanyvz <kaan_yavuz12@hotmail.com>
+|   Date:   Sun Mar 24 12:49:51 2024 +0300
+|
+|       conflict 2
+|
+*   commit c16c5febff5142a953465039112581bca7b92acf
+|\  Merge: 0d72be9 693f483
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:45:02 2024 +0300
+| |
+| |     Merge Feature 1
+| |
+| * commit 693f483a496c923841014f02d8a742bc21943f21 (feature1)
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:40:37 2024 +0300
+| |
+| |     feature done
+| |
+| * commit b1a75fcd1f2e2457781f4d2981158bdbdf4d8884
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:29:45 2024 +0300
+| |
+| |     feature commit 2
+| |
+| * commit a8aa2974fa60447a23b6f958fbe4789347289caf
+| | Author: kaanyvz <kaan_yavuz12@hotmail.com>
+| | Date:   Sun Mar 24 12:26:46 2024 +0300
+| |
+| |     feature commit 1
+| |
